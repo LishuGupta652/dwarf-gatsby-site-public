@@ -1,21 +1,82 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Typewriter from "typewriter-effect"
+import ScrollAnimation from "react-animate-on-scroll"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+import Header from "../components/Header"
+import WhoAreWe from "../components/AboutPage/WhoAreWe"
+import Mission from "../components/Mission"
+import Future from "../components/Future"
+import Method from "../components/Method"
+import Quote from "../components/Quote"
+import Footer from "../components/Footer"
+
+const IndexPage = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  return (
+    <>
+      <Header />
+
+      <div className="wrapper">
+        <div className="container">
+          <div className="inner-wrapper">
+            <h1>Dwarf Inc.</h1>
+            <h3>
+              operating in the field of Construction, Fabrication, Smart
+              Gardens, Smart Library, Smart parking Solutions
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      {/* <Header title="Home" backgroundImage="home.jpg">
+        <div className="sub-heading">
+          <h1>
+            <Typewriter
+              options={{
+                strings: ["Dwarf", "By You For You"],
+                autoStart: true,
+                loop: true,
+                delay: 100,
+                cursor: ".",
+                start: 3000,
+              }}
+            />
+          </h1>
+          <h2>Building Smart </h2>
+          <h2>
+            India<span className="dot">.</span>
+          </h2>
+        </div>
+      </Header> */}
+
+      <Quote />
+
+      <ScrollAnimation animateOnce animateIn="fadeIn">
+        <WhoAreWe />
+      </ScrollAnimation>
+
+      <div className="md-space" />
+      <Mission />
+
+      <div className="md-space" />
+      <Future />
+      <Method />
+
+      <div className="heading ex-vp">
+        <Link to="/product">
+          <h1>View Services</h1>
+          <i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+        </Link>
+      </div>
+
+      <Footer />
+    </>
+  )
+}
 
 export default IndexPage
