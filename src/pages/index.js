@@ -24,11 +24,25 @@ const IndexPage = () => {
       <div className="wrapper">
         <div className="container">
           <div className="inner-wrapper">
-            <h1>Dwarf Inc.</h1>
+            <h1>
+              <Typewriter
+                options={{
+                  strings: ["Dwarf", "By You For You"],
+                  autoStart: true,
+                  loop: true,
+                  delay: 100,
+                  cursor: ".",
+                  start: 3000,
+                }}
+              />
+            </h1>
             <h3>
-              operating in the field of Construction, Fabrication, Smart
-              Gardens, Smart Library, Smart parking Solutions
+              Organisation Operating in the field of Construction, Fabrication,
+              Smart Gardens, Smart Library, Smart parking Solutions
             </h3>
+            <Link to="/product">
+              <button>View Services</button>
+            </Link>
           </div>
         </div>
       </div>

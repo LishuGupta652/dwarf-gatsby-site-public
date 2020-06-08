@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "../components/HeaderBak"
+import Header from "../components/Header"
 import Image from "../components/Image"
 import Gallary from "../components/Gallary"
 import TypewriterEffect from "../components/TypewriterEffect"
@@ -27,9 +27,7 @@ const Images = () => {
           display: "flex",
           alignItems: "center",
         }}
-      >
-        {/* <Slider /> */}
-      </div>
+      ></div>
       <Footer />
     </>
   )
