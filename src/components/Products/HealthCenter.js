@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "../Header"
+import Header from "../../components/Header"
 import { Link } from "gatsby"
 import ScrollAnimation from "react-animate-on-scroll"
 
