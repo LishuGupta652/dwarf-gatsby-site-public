@@ -1,8 +1,8 @@
 import React from "react"
-import Header from "../components/Header"
 import ContactForm from "../components/ContactPage/ContactForm"
 import TypewriterEffect from "../components/TypewriterEffect"
 import Footer from "../components/Footer"
+import Header from "../components/header"
 
 const Contact = () => {
   React.useEffect(() => {

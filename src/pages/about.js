@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "../components/Header"
+import Header from "../components/header"
 import WhoAreWe from "../components/AboutPage/WhoAreWe"
 import AboutInfo from "../components/AboutPage/AboutInfo"
 import TypewriterEffect from "../components/TypewriterEffect"
