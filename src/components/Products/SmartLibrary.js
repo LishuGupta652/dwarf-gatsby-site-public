@@ -24,6 +24,28 @@ const SmartLibrary = () => {
         </ol>
       </Header>
 
+      <div className="display">
+        <div className="container">
+          <div className="inner-display">
+            <h1 className="text-black">Smart Library</h1>
+            <ol className="head-list">
+              <a href="#intro">
+                <li>Introduction of Digital Library?</li>
+              </a>
+              <a href="#meaning_and_nature">
+                <li>Digital library: Meaning and Nature</li>
+              </a>
+              <a href="#characterstics">
+                <li>Characterstics of digital libraries </li>
+              </a>
+              <a href="#managing_content">
+                <li>Managing Digital library content</li>
+              </a>
+            </ol>
+          </div>
+        </div>
+      </div>
+
       <div className="content-wrapper" id="intro">
         <section>
           <h1>Introduction of Digital Library?</h1>

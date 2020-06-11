@@ -27,6 +27,31 @@ const DigitalClasses = () => {
         </ol>
       </Header>
 
+      <div className="display">
+        <div className="container">
+          <div className="inner-display">
+            <h1 className="text-black">Digital Classes</h1>
+            <ol className="head-list">
+              <a href="#What_are_digital">
+                <li>What are DigitalClasses ?</li>
+              </a>
+              <a href="#Outcomes">
+                <li>Outcome for the Educator and Learner.</li>
+              </a>
+              <a href="#Tools">
+                <li>Portable Interactive tools</li>
+              </a>
+              <a href="#Implementation">
+                <li>Implementation Methodology</li>
+              </a>
+              <a href="#Way_forward">
+                <li>Way Forward</li>
+              </a>
+            </ol>
+          </div>
+        </div>
+      </div>
+
       <div className="content-wrapper" id="What_are_digital">
         <section>
           <h1>What are Digital Classrooms?</h1>

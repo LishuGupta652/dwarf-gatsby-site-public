@@ -1,17 +1,17 @@
 import React from "react"
 
 // Product Component
-import DigitalClasses from "../../components/Products/DigitalClasses"
+import Medicaps from "../../components/Products/Medicaps"
 import Footer from "../../components/Footer"
 
-const SingleProduct = props => {
+const SingleProduct = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   return (
     <div>
-      <DigitalClasses />
+      <Medicaps />
       <Footer />
     </div>
   )

@@ -1,12 +1,85 @@
-import React from "react"
+import React, { useState } from "react"
 import FixedItems from "./FixedItems"
 import logo from "../images/logo.png"
 import { Link } from "gatsby"
+import { motion, useAnimation } from "framer-motion"
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const navControler = useAnimation()
+
+  const setNavigationOpen = () => {
+    setIsOpen(true)
+    navControler.start("visible")
+  }
+  const setNavigationClose = () => {
+    setIsOpen(false)
+    navControler.start("hidden")
+  }
+
+  const variants = {
+    visible: { opacity: 1, y: "0vh", transition: { duration: 0.25 } },
+    hidden: { opacity: 0, y: "-100vh", transition: { duration: 0.25 } },
+  }
+
+  const list = {
+    visible: { opacity: 1, transition: { duration: 0.1 } },
+    hidden: { opacity: 0 },
+  }
+
+  const item = {
+    visible: custom => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: custom * 0.2 },
+    }),
+    hidden: { opacity: 0, x: -100 },
+    hover: { scale: 1.2 },
+    tap: { scale: 0.8 },
+  }
+
   return (
     <>
       <header className="header">
+        <motion.div
+          className="fixed-nav-open"
+          variants={variants}
+          animate={navControler}
+          initial="hidden"
+        >
+          <div className="container">
+            <div className="close" onClick={setNavigationClose}>
+              <i className="gg-close"></i>
+            </div>
+          </div>
+          <motion.ul initial="hidden" animate={navControler} variants={list}>
+            <Link to="/" activeStyle={{ color: "blue" }}>
+              <motion.li variants={item} whileHover="hover" whileTap="tap">
+                Home
+              </motion.li>
+            </Link>
+            <Link to="/about" activeStyle={{ color: "blue" }}>
+              <motion.li variants={item} whileHover="hover" whileTap="tap">
+                About
+              </motion.li>
+            </Link>
+            <Link to="/product" activeStyle={{ color: "blue" }}>
+              <motion.li variants={item} whileHover="hover" whileTap="tap">
+                Services
+              </motion.li>
+            </Link>
+            <Link to="/images" activeStyle={{ color: "blue" }}>
+              <motion.li variants={item} whileHover="hover" whileTap="tap">
+                Gallary
+              </motion.li>
+            </Link>
+            <Link to="/contact" activeStyle={{ color: "blue" }}>
+              <motion.li variants={item} whileHover="hover" whileTap="tap">
+                Contact
+              </motion.li>
+            </Link>
+          </motion.ul>
+        </motion.div>
         <div className="container">
           <div className="inner-header">
             <h1 className="logo">
@@ -14,7 +87,7 @@ const Header = () => {
                 <img src={logo} alt="logo" />
               </Link>
             </h1>
-            <div className="nav-icon">
+            <div className="nav-icon" onClick={setNavigationOpen}>
               <svg
                 width="24"
                 height="24"

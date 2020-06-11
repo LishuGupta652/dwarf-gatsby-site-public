@@ -12,9 +12,10 @@ const NotFound = () => {
       <Header
         title="Opps! 404 Not Found"
         background="linear-gradient(to right, #d53369, #cbad6d)"
-      >
-        <h1 className="title">Opps! 404 Not Found</h1>
-      </Header>
+      ></Header>
+      <div className="page-not-found">
+        <h1 className="">Opps! 404 Not Found</h1>
+      </div>
       <Footer />
     </div>
   )

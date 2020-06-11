@@ -1,7 +1,5 @@
 import React from "react"
 import Header from "../components/Header"
-import Image from "../components/Image"
-import Gallary from "../components/Gallary"
 import TypewriterEffect from "../components/TypewriterEffect"
 import Footer from "../components/Footer"
 
@@ -20,14 +18,19 @@ const Images = () => {
         </h1>
       </Header>
 
-      <div
-        style={{
-          height: "100vh",
-          backgroundColor: "#f5f5f5",
-          display: "flex",
-          alignItems: "center",
-        }}
-      ></div>
+      <div className="images">
+        <div className="container">
+          <h1>Images</h1>
+          <div className="inner-images">
+            <img src="https://unsplash.it/200" alt="img"></img>
+            <img src="https://unsplash.it/201" alt="img"></img>
+            <img src="https://unsplash.it/202" alt="img"></img>
+            <img src="https://unsplash.it/204" alt="img"></img>
+            <img src="https://unsplash.it/205" alt="img"></img>
+            <img src="https://unsplash.it/206" alt="img"></img>
+          </div>
+        </div>
+      </div>
       <Footer />
     </>
   )

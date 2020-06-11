@@ -8,32 +8,30 @@ const Footer = () => {
         <section>
           <div className="footer-flex">
             <div className="footer-links">
-              <Link to="/">
-                <h3>Home</h3>
+              <Link to="/" activeStyle={{ color: "blue" }}>
+                <h3 className="unactive">Home</h3>
               </Link>
 
-              <Link to="/about">
-                <h3>About</h3>
+              <Link to="/about" activeStyle={{ color: "blue" }}>
+                <h3 className="unactive">About</h3>
               </Link>
 
-              <Link to="/product">
-                <h3>Services</h3>
+              <Link to="/product" activeStyle={{ color: "blue" }}>
+                <h3 className="unactive">Services</h3>
               </Link>
 
-              <Link to="/images">
-                <h3>Gallary</h3>
+              <Link to="/images" activeStyle={{ color: "blue" }}>
+                <h3 className="unactive">Gallary</h3>
               </Link>
 
-              <Link to="/contact">
-                <h3>Contact</h3>
+              <Link to="/contact" activeStyle={{ color: "blue" }}>
+                <h3 className="unactive">Contact</h3>
               </Link>
             </div>
-            <a href="#">
-              <div className="to-top">
-                <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i> back
-                to top
-              </div>
-            </a>
+            <div className="to-top">
+              <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>{" "}
+              <a href="#">back to top</a>
+            </div>
           </div>
         </section>
         <h2 className="foot">© Dwarf 2020</h2>

@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Typewriter from "typewriter-effect"
-import ScrollAnimation from "react-animate-on-scroll"
 
 import Header from "../components/Header"
 import WhoAreWe from "../components/AboutPage/WhoAreWe"
@@ -70,23 +69,13 @@ const IndexPage = () => {
 
       <Quote />
 
-      <ScrollAnimation animateOnce animateIn="fadeIn">
-        <WhoAreWe />
-      </ScrollAnimation>
+      <WhoAreWe />
 
-      <div className="md-space" />
       <Mission />
 
-      <div className="md-space" />
       <Future />
-      <Method />
 
-      <div className="heading ex-vp">
-        <Link to="/product">
-          <h1>View Services</h1>
-          <i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-        </Link>
-      </div>
+      <Method />
 
       <Footer />
     </>

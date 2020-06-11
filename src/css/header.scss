@@ -1,20 +1,89 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap");
 
 $nav-height: 70px;
+$color-blue: rgb(33, 33, 240);
 $color-blue-opacity: rgba(33, 33, 240, 0.1);
 
 .container {
   max-width: 1100px;
   margin: 0 auto;
   width: 100%;
-  height: $nav-height;
 }
+
+//:::::::::::::::::::::::::::: header :::::::::::::::::::::::::::::::::::::::::
 header {
   width: 100%;
   display: grid;
   align-items: center;
   height: $nav-height;
   background-color: $color-blue-opacity;
+  position: relative;
+
+  .fixed-nav-open {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1;
+    ul {
+      background-color: $color-blue-opacity;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      a {
+        color: black;
+      }
+      li {
+        padding: 20px;
+      }
+    }
+    .close {
+      position: relative;
+      background-color: red;
+      .gg-close {
+        box-sizing: border-box;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        display: block;
+        transform: scale(var(--ggs, 1));
+        width: 22px;
+        height: 22px;
+        border: 2px solid transparent;
+        border-radius: 40px;
+        color: blue;
+
+        &::after,
+        &::before {
+          content: "";
+          display: block;
+          box-sizing: border-box;
+          position: absolute;
+          width: 16px;
+          height: 2px;
+          background: currentColor;
+          transform: rotate(45deg);
+          border-radius: 5px;
+          top: 8px;
+          left: 1px;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 800px) {
+    .fixed-nav-open {
+      width: 50%;
+    }
+  }
 
   .inner-header {
     padding: 0 10px;
@@ -37,6 +106,7 @@ header {
   }
 }
 
+// :::::::::::::::::::::::::::::: wrapper :::::::::::::::::::::::::::::::
 .wrapper {
   height: calc(100vh - 70px);
   display: grid;
@@ -82,4 +152,194 @@ header {
       }
     }
   }
+}
+
+// :::::::::::::::::::::::::::::: DISPLAY :::::::::::::::::::::::::::::
+.display {
+  margin: 70px 20px;
+  .inner-display {
+    height: auto;
+    background-color: rgba(33, 33, 240, 0.06);
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 1100px) {
+    margin: 100px 0px;
+    text-align: center;
+    .inner-display {
+      padding: 40px;
+      .display-head {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+// :::::::::::::::::::::::::::::: METHOD :::::::::::::::::::::::::::::
+.method {
+  margin-top: 100px;
+
+  .inner-method {
+    padding: 30px;
+
+    .flex {
+      display: flex;
+      flex-direction: column;
+
+      .left {
+        padding: 20px 30px;
+        background-color: rgba(33, 33, 240, 0.1);
+        border-radius: 5px;
+        .left-head {
+          margin-bottom: 20px;
+        }
+      }
+      .right {
+        padding: 20px 30px;
+      }
+    }
+
+    .card-flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 0;
+
+      .card {
+        margin: 10px;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(33, 33, 240, 0.1);
+        border-radius: 5px;
+
+        .card-head {
+          background-color: antiquewhite;
+          padding: 10px 0;
+        }
+        .card-body {
+          height: 100%;
+          padding: 30px;
+        }
+      }
+    }
+  }
+  @media (min-width: 800px) {
+    .inner-method {
+      .flex {
+        flex-direction: row;
+      }
+    }
+    .card-flex-container {
+      .card {
+        width: 46% !important;
+        .card-body {
+          padding: 50px;
+        }
+      }
+    }
+  }
+  @media (min-width: 1100px) {
+    .card {
+      width: 22%;
+    }
+  }
+}
+
+// ::::::::::::::::::::::::::::::::: ABOUT :::::::::::::::::::::::
+.images {
+  margin: 100px 0;
+  text-align: center;
+  text-transform: uppercase;
+  .inner-images {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      width: 100%;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .inner-images {
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .inner-images {
+      img {
+        width: 33%;
+      }
+    }
+  }
+}
+
+// ::::::::::::::::::::::::::::::::: ABOUT :::::::::::::::::::::::
+.about {
+  .inner-about {
+    background-color: $color-blue-opacity;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 30px 0;
+
+    .wrap {
+      margin: 30px 0;
+    }
+  }
+}
+
+// ::::::::::::::::::::::::::::::::: Contact :::::::::::::::::::::::
+.contact {
+  margin: 50px 0;
+  .inner-contact {
+    overflow: hidden;
+    background-color: $color-blue-opacity;
+    border-radius: 4px;
+    margin: 5px;
+
+    .content {
+      align-self: center;
+      padding: 10px;
+      h3 {
+        color: #333;
+      }
+      span {
+        font-size: 22px;
+        color: $color-blue;
+      }
+    }
+    .contact-img {
+      padding: 50px;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .inner-contact {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .content {
+        width: 50%;
+        padding: 50px;
+      }
+      .contact-img {
+        padding: 50px;
+        width: 50%;
+      }
+    }
+  }
+}
+
+// ::::::::::::::::::::::::::::::::: Page Not Found :::::::::::::::::::::::
+.page-not-found {
+  height: 500px;
+  display: grid;
+  place-items: center;
 }

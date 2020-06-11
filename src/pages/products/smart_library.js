@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 
 // Product Component
 import SmartLibrary from "../../components/Products/SmartLibrary"
@@ -8,9 +8,6 @@ const SingleProduct = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
-  //   const product = props.match.params.id
-  //   console.log(product)
 
   return (
     <div>

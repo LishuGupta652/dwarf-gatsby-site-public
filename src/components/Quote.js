@@ -1,5 +1,4 @@
-import React from "react";
-import ScrollAnimation from "react-animate-on-scroll";
+import React from "react"
 
 const Quote = () => {
   const quotesList = [
@@ -35,28 +34,23 @@ const Quote = () => {
       desc:
         "Your work is discover your work and then with all your heart to give yourself to it.",
     },
-  ];
-  const randColor = ["#fc5c65", "#fd9644", "#fed330", "#26de81", "#4b7bec"];
-  const rand5 = Math.floor(Math.random() * Math.floor(5));
-  const rand = Math.floor(Math.random() * Math.floor(4));
+  ]
+  const randColor = ["#fc5c65", "#fd9644", "#fed330", "#26de81", "#4b7bec"]
+  const rand5 = Math.floor(Math.random() * Math.floor(5))
+  const rand = Math.floor(Math.random() * Math.floor(4))
   return (
     <div className="quote" style={{ backgroundColor: randColor[rand5] }}>
-      <ScrollAnimation animateIn="fadeIn">
-        <div className="quote-container">
-          <div className="quote">
-            <i className="fa fa-quote-left" aria-hidden="true"></i>
-            <span>{quotesList[rand].desc}</span>
-          </div>
-          {/* <div className="q-btn">
-            <div className="button">Next</div>
-          </div> */}
-          <div className="author">
-            <div>{quotesList[rand].author}</div>
-          </div>
+      <div className="quote-container">
+        <div className="quote">
+          <i className="fa fa-quote-left" aria-hidden="true"></i>
+          <span>{quotesList[rand].desc}</span>
         </div>
-      </ScrollAnimation>
+        <div className="author">
+          <div>{quotesList[rand].author}</div>
+        </div>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default Quote;
+export default Quote

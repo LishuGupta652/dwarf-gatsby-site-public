@@ -1,27 +1,17 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 //Context API
 const Services = () => {
   return (
     <>
-      {/* <Link to="/products/smart_library">
-        <div className="products">
-          <div className="card">
-            <div className="wrapper">
-              <h3>
-                Smart Library
-                <span>
-                  <i
-                    className="fa fa-arrow-circle-o-right"
-                    aria-hidden="true"
-                  ></i>
-                </span>
-              </h3>
-            </div>
+      <div className="sp-container ">
+        <Link to="/products/medicaps">
+          <div className="sp-card background-third">
+            <h1>Medicaps </h1>
           </div>
-        </div>
-      </Link> */}
+        </Link>
+      </div>
       <div className="sp-container">
         <Link to="/products/smart_library">
           <div className="sp-card">

@@ -24,6 +24,28 @@ const HealthCenter = () => {
         </ol>
       </Header>
 
+      <div className="display">
+        <div className="container">
+          <div className="inner-display">
+            <h1 className="text-black">Health Center</h1>
+            <ol className="head-list">
+              <a href="#intro">
+                <li>What are PHC ?</li>
+              </a>
+              <a href="#Overview">
+                <li>Overview</li>
+              </a>
+              <a href="#Moving_toward_PHC">
+                <li>Moving Toward PHC </li>
+              </a>
+              <a href="#health_promotions">
+                <li>What are health Promotions</li>
+              </a>
+            </ol>
+          </div>
+        </div>
+      </div>
+
       <div className="content-wrapper" id="intro">
         <section>
           <h1>What are PHC ?</h1>

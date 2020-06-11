@@ -1,27 +1,33 @@
-import React from "react";
+import React from "react"
 
 const AboutInfo = () => {
   return (
-    <div className="ai-container">
-      <h1 className="heading ab-wra">About </h1>
-      <ul>
-        <li>
-          <h3>A world of Knowledge at your fingure.</h3>
-        </li>
+    <div className="display">
+      <div className="container">
+        <div className="inner-display">
+          <div className="wrap" style={{ marginBottom: 20 }}>
+            <h1>About </h1>
+            <ul>
+              <li>
+                <p>A world of Knowledge at your fingure.</p>
+              </li>
 
-        <li>
-          <h3>Learning together from the comfort of your home.</h3>
-        </li>
-        <li>
-          <h3>A solution of every need.</h3>
-        </li>
-      </ul>
-      <div className="ab-ser-wra">
-        <h1 className="heading ">Services</h1>
-        <h3>Our Expert will guide</h3>
+              <li>
+                <p>Learning together from the comfort of your home.</p>
+              </li>
+              <li>
+                <p>A solution of every need.</p>
+              </li>
+            </ul>
+          </div>
+          <div className="wrap">
+            <h1>Services</h1>
+            <p>Our Expert will guide</p>
+          </div>
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AboutInfo;
+export default AboutInfo
