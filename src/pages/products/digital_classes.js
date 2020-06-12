@@ -4,16 +4,17 @@ import React from "react"
 import DigitalClasses from "../../components/Products/DigitalClasses"
 import Footer from "../../components/Footer"
 
+import Layout from "../../layout"
+
 const SingleProduct = props => {
   React.useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   return (
-    <div>
+    <Layout>
       <DigitalClasses />
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 

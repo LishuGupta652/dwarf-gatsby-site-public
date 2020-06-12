@@ -4,6 +4,7 @@ import TypewriterEffect from "../components/TypewriterEffect"
 import Footer from "../components/Footer"
 
 // import { Slider } from "../components/Slider";
+import Layout from "../layout"
 
 const Images = () => {
   React.useEffect(() => {
@@ -11,13 +12,7 @@ const Images = () => {
   }, [])
 
   return (
-    <>
-      <Header title="Images" backgroundImage="gallary.jpg">
-        <h1>
-          <TypewriterEffect title="Images .." />
-        </h1>
-      </Header>
-
+    <Layout>
       <div className="images">
         <div className="container">
           <h1>Images</h1>
@@ -31,8 +26,7 @@ const Images = () => {
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
   )
 }
 

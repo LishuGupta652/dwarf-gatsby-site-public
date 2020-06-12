@@ -11,6 +11,8 @@ import Method from "../components/Method"
 import Quote from "../components/Quote"
 import Footer from "../components/Footer"
 
+import Layout from "../layout"
+
 const IndexPage = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0)
@@ -18,35 +20,35 @@ const IndexPage = () => {
 
   return (
     <>
-      <Header />
-
-      <div className="wrapper">
-        <div className="container">
-          <div className="inner-wrapper">
-            <h1>
-              <Typewriter
-                options={{
-                  strings: ["Dwarf", "By You For You"],
-                  autoStart: true,
-                  loop: true,
-                  delay: 100,
-                  cursor: ".",
-                  start: 3000,
-                }}
-              />
-            </h1>
-            <h3>
-              Organisation Operating in the field of Construction, Fabrication,
-              Smart Gardens, Smart Library, Smart parking Solutions
-            </h3>
-            <Link to="/product">
-              <button>View Services</button>
-            </Link>
+      <Layout>
+        <div className="wrapper">
+          <div className="container">
+            <div className="inner-wrapper">
+              <h1>
+                <Typewriter
+                  options={{
+                    strings: ["Dwarf", "By You For You"],
+                    autoStart: true,
+                    loop: true,
+                    delay: 100,
+                    cursor: ".",
+                    start: 3000,
+                  }}
+                />
+              </h1>
+              <h3>
+                Organisation Operating in the field of Construction,
+                Fabrication, Smart Gardens, Smart Library, Smart parking
+                Solutions
+              </h3>
+              <Link to="/product">
+                <button>View Services</button>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* <Header title="Home" backgroundImage="home.jpg">
+        {/* <Header title="Home" backgroundImage="home.jpg">
         <div className="sub-heading">
           <h1>
             <Typewriter
@@ -67,17 +69,16 @@ const IndexPage = () => {
         </div>
       </Header> */}
 
-      <Quote />
+        <Quote />
 
-      <WhoAreWe />
+        <WhoAreWe />
 
-      <Mission />
+        <Mission />
 
-      <Future />
+        <Future />
 
-      <Method />
-
-      <Footer />
+        <Method />
+      </Layout>
     </>
   )
 }

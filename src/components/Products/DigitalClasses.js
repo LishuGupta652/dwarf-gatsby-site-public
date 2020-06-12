@@ -6,27 +6,6 @@ import ScrollAnimation from "react-animate-on-scroll"
 const DigitalClasses = () => {
   return (
     <div>
-      <Header backgroundColor="#60a3bc">
-        <h1 className="text-black">Digital Classes</h1>
-        <ol className="head-list">
-          <a href="#What_are_digital">
-            <li>What are DigitalClasses ?</li>
-          </a>
-          <a href="#Outcomes">
-            <li>Outcome for the Educator and Learner.</li>
-          </a>
-          <a href="#Tools">
-            <li>Portable Interactive tools</li>
-          </a>
-          <a href="#Implementation">
-            <li>Implementation Methodology</li>
-          </a>
-          <a href="#Way_forward">
-            <li>Way Forward</li>
-          </a>
-        </ol>
-      </Header>
-
       <div className="display">
         <div className="container">
           <div className="inner-display">

@@ -7,8 +7,6 @@ import Services from "../Services"
 const Medicaps = () => {
   return (
     <div>
-      <Header />
-
       <div className="display">
         <div className="container">
           <div className="inner-display">

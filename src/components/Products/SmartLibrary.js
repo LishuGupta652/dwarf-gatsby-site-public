@@ -6,24 +6,6 @@ import ScrollAnimation from "react-animate-on-scroll"
 const SmartLibrary = () => {
   return (
     <div>
-      <Header backgroundColor="#58B19F">
-        <h1 className="text-black">Smart Library</h1>
-        <ol className="head-list">
-          <a href="#intro">
-            <li>Introduction of Digital Library?</li>
-          </a>
-          <a href="#meaning_and_nature">
-            <li>Digital library: Meaning and Nature</li>
-          </a>
-          <a href="#characterstics">
-            <li>Characterstics of digital libraries </li>
-          </a>
-          <a href="#managing_content">
-            <li>Managing Digital library content</li>
-          </a>
-        </ol>
-      </Header>
-
       <div className="display">
         <div className="container">
           <div className="inner-display">

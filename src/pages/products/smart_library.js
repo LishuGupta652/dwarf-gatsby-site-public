@@ -4,16 +4,17 @@ import React from "react"
 import SmartLibrary from "../../components/Products/SmartLibrary"
 import Footer from "../../components/Footer"
 
+import Layout from "../../layout"
+
 const SingleProduct = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   return (
-    <div>
+    <Layout>
       <SmartLibrary />
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 

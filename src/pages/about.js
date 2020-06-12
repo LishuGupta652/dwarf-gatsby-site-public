@@ -5,22 +5,18 @@ import AboutInfo from "../components/AboutPage/AboutInfo"
 import TypewriterEffect from "../components/TypewriterEffect"
 import Footer from "../components/Footer"
 
+import Layout from "../layout"
+
 const About = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   return (
-    <>
-      <Header title="About Us" backgroundImage="about.jpg">
-        <h1>
-          <TypewriterEffect title="About Us .." />
-        </h1>
-      </Header>
+    <Layout>
       <WhoAreWe />
       <AboutInfo />
-      <Footer />
-    </>
+    </Layout>
   )
 }
 

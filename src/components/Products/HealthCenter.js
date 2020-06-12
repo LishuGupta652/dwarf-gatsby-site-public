@@ -6,24 +6,6 @@ import ScrollAnimation from "react-animate-on-scroll"
 const HealthCenter = () => {
   return (
     <div>
-      <Header backgroundColor="#78e08f">
-        <h1 className="text-black">Health Center</h1>
-        <ol className="head-list">
-          <a href="#intro">
-            <li>What are PHC ?</li>
-          </a>
-          <a href="#Overview">
-            <li>Overview</li>
-          </a>
-          <a href="#Moving_toward_PHC">
-            <li>Moving Toward PHC </li>
-          </a>
-          <a href="#health_promotions">
-            <li>What are health Promotions</li>
-          </a>
-        </ol>
-      </Header>
-
       <div className="display">
         <div className="container">
           <div className="inner-display">
