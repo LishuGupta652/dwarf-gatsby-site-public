@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Typewriter from "typewriter-effect"
 
-import Header from "../components/Header"
+import Header from "../components/header"
 import WhoAreWe from "../components/AboutPage/WhoAreWe"
 import Mission from "../components/Mission"
 import Future from "../components/Future"
