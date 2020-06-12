@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="header">
+      <header className="header">
         <motion.div
           className="fixed-nav-open"
           variants={variants}
@@ -112,7 +112,7 @@ const Header = () => {
           </div>
         </div>
         <FixedItems />
-      </div>
+      </header>
     </>
   )
 }
